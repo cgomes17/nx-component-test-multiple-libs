@@ -29,6 +29,15 @@
           "libs/shared-forms/**/*.html"
         ]
       }
+    },
+    "component-test": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/shared-forms/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "devServerTarget": "org:build"
+      }
     }
   }
 }
